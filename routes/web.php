@@ -14,5 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [LangController::class, 'index']);
 Route::get('/change', [LangController::class, 'change'])->name('changeLang');
+Route::get('/',function(){
+    return view('auth.login');
+});
