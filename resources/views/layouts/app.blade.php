@@ -20,5 +20,6 @@
     <x-theme.adjustTheme />
     {{ $slot }}
 </body>
+@vite('resources/js/common/validateDisapper.js')
 
 </html>

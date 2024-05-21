@@ -8,7 +8,7 @@
     </style>
     <br><br><br><br><br>
     <div class="container mx-auto text-center mt-auto">
-        <p class="text-5xl text-gray-500 dark:text-red-600">{{ __('messages.login_title') }}</p>
+        <p class="text-5xl text-gray-500 dark:text-white">{{ __('messages.login_title') }}</p>
     </div>
     <br><br>
     <div class="">
@@ -16,10 +16,9 @@
             <form action="#" method="post">
                 @csrf
                 <div class="w-[20rem] flex flex-col mx-auto">
-                    <img class="w-80 mx-auto mb-4 h-auto max-w-lg rounded-lg" src="{{ asset('/images/logo.jpg') }}"
-                        alt="">
                     <div class="px-2 flex flex-col pb-4">
-                        <label class="pb-2 pt-2 text-sm px-1 text-gray-500 font-mono" for="username">User Name</label>
+                        <label class="pb-2 pt-2 text-sm px-1 text-gray-500 dark:text-white font-mono"
+                            for="username">{{ __('messages.user_name') }}</label>
                         <input
                             class="border-2 text-sm border-gray-400 shadow-md rounded-md pb-2 pt-2 px-3 py-2 focus:border-2 focus:border-gray-600
                     focus:outline-none placeholder-gray-600 focus:text-sm focus:font-mono font-mono text-gray-500"
@@ -29,7 +28,8 @@
                         @enderror
                     </div>
                     <div class=" px-2 flex flex-col pb-4">
-                        <label class="pb-2 pt-2 text-sm px-1 text-gray-500 font-mono" for="password">Password</label>
+                        <label class="pb-2 pt-2 text-sm px-1 text-gray-500 dark:text-white font-mono"
+                            for="password">{{ __('messages.password') }}</label>
                         <input
                             class="border-2 placeholder:font-mono text-gray-500 text-sm border-gray-400 shadow-md rounded-md pb-2 pt-2 px-3 py-2
                                 focus:border-2 focus:border-gray-600
@@ -64,6 +64,5 @@
             </form>
         </div>
     </div>
-    @vite('resources/js/common/validateDisapper.js')
     @vite('resources/js/common/loginEyes.js')
 </x-app-layout>
